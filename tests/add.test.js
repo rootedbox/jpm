@@ -40,9 +40,6 @@ describe("jpm add", () => {
       encoding: "utf-8",
     });
 
-    console.log(result.stdout);
-    console.log(result.stderr);
-
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
     expect(packageJson).toHaveProperty("dependencies");
     expect(packageJson.dependencies).toHaveProperty("is-thirteen");

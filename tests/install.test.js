@@ -57,9 +57,6 @@ describe("jpm install", () => {
       encoding: "utf-8",
     });
 
-    console.log(result.stdout);
-    console.log(result.stderr);
-
     expect(result.status).toBe(0);
 
     expect(fs.existsSync(nodeModulesPath)).toBe(true);
